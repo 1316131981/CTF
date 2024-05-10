@@ -1,0 +1,10 @@
+# 打开原始文件和目标文件
+with open("C:\\Users\\陈长生\\Desktop\\临时文件夹\\hiddata.txt", 'r') as file:
+    lines = file.readlines()
+
+# 去掉空白行
+non_empty_lines = [line for line in lines if line.strip() != '']
+
+# 将结果写入新文件
+with open('C:\\Users\\陈长生\\Desktop\\临时文件夹\\output.txt', 'w') as file:
+    file.writelines(non_empty_lines)
